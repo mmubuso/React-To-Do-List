@@ -1,9 +1,4 @@
 # To Do List App
-General Assembly SEI June 11 - Project 1
-
-
-- Project: https://fervent-murdock-35e87e.netlify.com
-- GitHub: https://github.com/mmubuso/Simon-Game.git
 
 ## Overview
 The goal of this project was to React to create a to do list that would allow a user to create items, delete items and to persist the data ona refresh . 
