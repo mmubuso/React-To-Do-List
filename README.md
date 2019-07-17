@@ -1,68 +1,39 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# To Do List App
+General Assembly SEI June 11 - Project 1
 
-## Available Scripts
 
-In the project directory, you can run:
+- Project: https://fervent-murdock-35e87e.netlify.com
+- GitHub: https://github.com/mmubuso/Simon-Game.git
 
-### `npm start`
+## Overview
+The goal of this project was to React to create a to do list that would allow a user to create items, delete items and to persist the data ona refresh . 
 
-Runs the app in the development mode.<br>
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+##Challenge
+The to do list became challenging due to the fact that react handled the asynchronous functionality of setState differently from other async functions. If I tried to update my localStorage right after setting the state of the todoitem, the update wouldnt capture the value of set state right away and I would have to call it a second time to capture it.
 
-The page will reload if you make edits.<br>
-You will also see any lint errors in the console.
+#Solution
+At first I had to use setTimeout to make sure that I was able to store the changes that I made to my state right away when I added an item. After researching the the method setState and the React component life cycle I was able to pass my update localstorage function as a callback to my setState function. 
+To upload the task items from localstorage every time the page refreshed I  placed the update localstorage function inside the didComponentMount function. 
 
-### `npm test`
 
-Launches the test runner in the interactive watch mode.<br>
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+![Picture of To Do List](https://github.com/mmubuso/React-To-Do-List/blob/master/react-to-do-list.png)
 
-### `npm run build`
+## Game Play
+![Gif of To Do List](https://media.giphy.com/media/duWkvOqNRZoX07zl7L/giphy.gif)
 
-Builds the app for production to the `build` folder.<br>
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## How to Use
+1. Enter an item and click add to create a to do item
+2. Click on an item to delete it when its done
 
-The build is minified and the filenames include the hashes.<br>
-Your app is ready to be deployed!
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
 
-### `npm run eject`
+## Technologies Used
+- Languages --> HTML, CSS3, JavaScript, JSX
+- Libraries --> React, Flipmove
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
 
-Instead, it will copy all the configuration files and the transitive dependencies (Webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
 
-## Learn More
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
 
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
-
-### Analyzing the Bundle Size
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
-
-### Making a Progressive Web App
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
-
-### Advanced Configuration
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
-
-### Deployment
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
-
-### `npm run build` fails to minify
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
